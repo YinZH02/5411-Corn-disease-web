@@ -21,6 +21,7 @@ model = mobilenet_v2(weights=None)
 model.classifier[1] = nn.Linear(model.last_channel, 4)
 model.load_state_dict(torch.load('plant_model.pth', map_location='cpu'))
 model.eval()
+print("✅ MobileNetV2 模型加载完成（8MB轻量版本）")
 
 # 图像预处理（和训练一致）
 transform = transforms.Compose([
