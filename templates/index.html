@@ -1,19 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>植物病害识别系统</title>
+  <title>Plant Disease Classifier</title>
 </head>
 <body>
-    <h1>上传植物叶子图片</h1>
-    <form method="post" enctype="multipart/form-data">
-        <input type="file" name="file" accept="image/*" required>
-        <button type="submit">上传并识别</button>
-    </form>
-
-    {% if prediction %}
-        <h2>识别结果：{{ prediction }}</h2>
-        <img src="{{ image_url }}" alt="上传图片" style="max-width: 300px;">
-    {% endif %}
+  <h2>Upload an image of the plant leaf:</h2>
+  <form action="/" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="Predict">
+  </form>
 </body>
 </html>
