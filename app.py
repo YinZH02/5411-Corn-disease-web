@@ -10,7 +10,7 @@ UPLOAD_FOLDER = 'static/uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # 加载你的模型（修改为自己的模型路径）
-model = torch.load('your_model.pth', map_location='cpu')
+model = torch.load('plant_model.pth', map_location='cpu')
 model.eval()
 
 # 预测用的预处理
