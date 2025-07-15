@@ -19,7 +19,7 @@ DATA_DIR = r"C:\Users\Yinzi\OneDrive\桌面\Grade5\2025Summer\data"
 
 # 图像预处理
 transform = transforms.Compose([
-    transforms.Resize((224, 224)),
+    transforms.Resize((128, 128)),
     transforms.RandomHorizontalFlip(),
     transforms.ToTensor()
 ])
